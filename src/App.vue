@@ -2,9 +2,14 @@
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/methods">Method</router-link> |
+      <router-link to="/list">List</router-link> |
+      <router-link to="/lifecycle">Lifecycle</router-link> |
+      <router-link to="/slots">Slots</router-link>
     </nav>
-    <router-view/>
+    <router-view/> 
+    <footer style="background-color:black; color:white"><h1>This is footer</h1></footer>
   </div>
 </template>
 
