@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+// import { component } from 'vue/types/umd'
 import HomeView from '../views/HomeView.vue'
 import Methods from '../views/Methods.vue'
 
@@ -20,13 +21,33 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
+    path: '/methods',
+    name: 'methods',
+    component: Methods
+  },
+  {
+    path: '/list',
+    name: 'lists',
+    component: () => import('../views/ListRendering.vue')
+  },
+  {
+    path: '/lifecycle',
+    name: 'lifecycle',
+    component: () => import('../views/Lifecycle.vue')
+  },
+  {
+    path: '/slots',
+    name: 'slots',
+    component: () => import('../views/SlotExample.vue')
+  },
+  {
     path: '/students',
-    name: 'student'
+    name: 'student',
     component: () => import('../views/StudentsList.vue')
   },
   {
     path: '/students/:id',
-    name: 'editStudent'
+    name: 'editStudent',
     component: () => import('../views/EditStudent.vue')
   }
 ]
